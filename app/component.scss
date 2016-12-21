@@ -1,0 +1,15 @@
+.first{
+    width: 400px;
+    height: 400px;
+    font-size: 24px;
+    .clo-1{
+        width: 500px;
+        height: 500px;
+        color: red;
+        background: url('./images/bike.png')
+                    no-repeat center center;
+    }
+    .clo-2{
+        color: green;
+    }
+}
