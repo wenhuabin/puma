@@ -13,7 +13,7 @@ class Hello extends React.Component {
             <div className="clo-1">
 			    hello world!
             </div>
-            <img src={require('./images/hj.jpg')} />
+            <img src={require('./images/bike.png')} />
             <div className="clo-2">
 			    hello world!
             </div>
