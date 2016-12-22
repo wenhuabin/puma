@@ -1,15 +1,11 @@
 import React from 'react';
-import Component from 'react';
 import ReactDOM from 'react-dom';
+import {Router, Route, hashHistory, browserHistory} from 'react-router';
 import Hello from 'common/component';
 
-ReactDOM.render(
-	<Hello/>,
-	document.getElementById('app')
+ReactDOM.render((
+    <Router history={browserHistory}>
+        <Route path="/" component={Hello}/>
+    </Router>),
+    document.getElementById('app')
 );
-
-//'use strict';
-//var component = require('./component.js');
-//
-//
-//document.body.appendChild(component());
