@@ -3,7 +3,8 @@ var path = require('path');
 var node_modules = path.resolve(__dirname, 'node_modules');
 var SRC_PATH = path.resolve(__dirname, 'app');
 
-var HTMLWebpackPlugin = require('html-webpack-plugin');
+var HTMLWebpackPlugin = require('html-webpack-plugin'),
+	CleanWebpackPlugin = require('clean-webpack-plugin');
 
 
 var config = {
@@ -41,7 +42,12 @@ var config = {
 			template: path.resolve(SRC_PATH, 'template.html'),
 			chunks: ['main'],	
 			inject: 'body'
-		})
+		}),
+		new CleanWebpackPlugin(['build', 'dist'],{
+			root: path.resolve(SRC_PATH, './'),
+			verbose: true,
+			dry: false
+		}),
 	],
 };
 
