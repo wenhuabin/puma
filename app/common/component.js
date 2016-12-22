@@ -1,4 +1,4 @@
-require('./component.scss');
+require('sass/component.scss');
 import React from 'react';
 import Component from 'react';
 
@@ -13,7 +13,7 @@ class Hello extends React.Component {
             <div className="clo-1">
 			    hello world!
             </div>
-            <img src={require('./images/bike.png')} />
+            <img src={require('images/bike.png')} />
             <div className="clo-2">
 			    hello world!
             </div>
