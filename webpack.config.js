@@ -15,6 +15,9 @@ var config = {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js',
     },
+	devServer: {
+    	historyApiFallback: true,
+  	},
 	module: {
 		loaders: [{
 			test: /\.(js|jsx)$/,

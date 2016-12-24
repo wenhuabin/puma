@@ -6,16 +6,14 @@ const routes = {
     		path: 'about',
     		getComponent(location, cb) {
     		    require.ensure([], require => {
-    		        //cb(null, require('common/About'));
-    		        cb(null, '../common/ComingSoon');
+    		        cb(null, require('common/About'));
     		    });
     		}
 		},{
     		path: 'coming-soon',
     		getComponent(location, cb) {
     		    require.ensure([], require => {
-    		        //cb(null, require('common/ComingSoon'));
-    		        cb(null, '../common/ComingSoon');
+    		        cb(null, require('common/ComingSoon'));
     		    });
     		}
 
