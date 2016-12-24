@@ -1,11 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Router, Route, hashHistory, browserHistory} from 'react-router';
-import Hello from 'common/component';
+import {Router, Route, IndexRoute, browserHistory} from 'react-router';
+import rootRoute from 'routes/root';
 
-ReactDOM.render((
-    <Router history={browserHistory}>
-        <Route path="/" component={Hello}/>
-    </Router>),
+ReactDOM.render(
+    <Router history={browserHistory} routes={rootRoute} />,
     document.getElementById('app')
 );

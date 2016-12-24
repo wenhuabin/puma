@@ -33,7 +33,8 @@ var config = {
 		alias: {
 			'common': 'common',
 			'sass': 'sass',
-			'images': 'images'
+			'images': 'images',
+			'routes': 'routes',
 		},
     },
 	plugins: [
