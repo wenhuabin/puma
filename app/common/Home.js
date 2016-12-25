@@ -10,7 +10,6 @@ class Home extends Component {
 
 	
   render() {
-    console.log(this.props.pro);
     return (
         <div className="clo-2">
 		    Home!
