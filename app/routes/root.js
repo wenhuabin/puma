@@ -1,6 +1,6 @@
 const routes = {
     path: '/',
-    component: require('common/App'),
+    component: require('component/App'),
     indexRoute: {component: require('common/Home')},
     childRoutes: [{
     		path: 'about',

@@ -41,6 +41,9 @@ var config = {
 			'sass': 'sass',
 			'images': 'images',
 			'routes': 'routes',
+            'middlewares': 'middlewares',
+            'redux': 'redux',
+            'component': 'component',
 		},
     },
 	plugins: [
