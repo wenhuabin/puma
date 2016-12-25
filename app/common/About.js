@@ -1,8 +1,7 @@
 require('sass/app.scss');
-import React from 'react';
-import Component from 'react';
+import {Component} from 'react';
 
-class About extends React.Component {
+class About extends Component {
   constructor(props){
 	super(props);
   }
