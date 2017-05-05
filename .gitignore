@@ -2,7 +2,8 @@
 .vscode
 .DS_Store
 .sass-cache
-build
+static
+dist
 node_modules
 npm-debug.log
 __build__
