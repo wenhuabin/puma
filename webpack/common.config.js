@@ -29,10 +29,11 @@ var config = {
 		//									presets: [],
 		//									plugins: []
 		//							   }
+		// babel 优化：cacheDirectory
         noParse: [],
 		loaders: [{
 			test: /\.(js|jsx)$/,
-            loader: 'react-hot!babel?presets[]=react&presets[]=es2015&plugins[]=transform-decorators-legacy',
+            loader: 'react-hot!babel?cacheDirectory=true&presets[]=react&presets[]=es2015&plugins[]=transform-decorators-legacy',
             exclude: /node_modules/ 
 		},{
 			test: /\.(png|jpg)$/,
