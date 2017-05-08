@@ -24,6 +24,11 @@ var config = {
 	module: {
         //noParse 是 webpack 的另一个很有用的配置项，如果你确定一个模块中没有其它新的依赖 就可以配置这项，webpack 将不再扫描这个文件中的依赖。
         //exclude 排除不处理的目录
+		//babel exclude: /(|)/
+		// babel: 参数可以单独出来 query: {
+		//									presets: [],
+		//									plugins: []
+		//							   }
         noParse: [],
 		loaders: [{
 			test: /\.(js|jsx)$/,
