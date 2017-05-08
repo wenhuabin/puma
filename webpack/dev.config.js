@@ -1,6 +1,7 @@
 var _ = require("lodash"),
     config = require("./common.config"),
-    webpack = require("webpack");
+    webpack = require("webpack"),
+	devEntryConfig = {};
 
 _.merge(config, {
     debug: true,
@@ -8,8 +9,19 @@ _.merge(config, {
 });
 
 config.output['publicPath'] = 'http://localhost:3000/static/';
-config.entry.main.unshift('webpack-dev-server/client?http://localhost:3000',
+
+_.forEach(config.entry, function(value, key){
+
+    if(!_.isArray(value)){
+        value = [value]
+    }
+
+    value.unshift('webpack-dev-server/client?http://localhost:3000',
                   'webpack/hot/only-dev-server');
+
+    devEntryConfig[key] = value;
+});
+config.entry = devEntryConfig;
 
 config.plugins.push(new webpack.HotModuleReplacementPlugin(),
                     new webpack.NoErrorsPlugin());

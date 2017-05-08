@@ -31,7 +31,7 @@ var config = {
             exclude: /node_modules/ 
 		},{
 			test: /\.(png|jpg)$/,
-			loader: 'url?limit=8192'
+			loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]'
 		},{
 			test: /\.scss$/,
 			loader: 'style!css!sass'
@@ -61,8 +61,8 @@ var config = {
 			chunks: ['main'],	
 			inject: 'body'
 		}),
-		new CleanWebpackPlugin(['build', 'dist'],{
-			root: path.resolve(SRC_PATH, './'),
+		new CleanWebpackPlugin(['static'],{
+			root: path.resolve(SRC_PATH, '../'),
 			verbose: true,
 			dry: false
 		}),
