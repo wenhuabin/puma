@@ -4,6 +4,7 @@
 .sass-cache
 static
 dist
+build
 node_modules
 npm-debug.log
 __build__
