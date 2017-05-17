@@ -4,6 +4,7 @@ var _ = require("lodash"),
 	devEntryConfig = {};
 
 _.merge(config, {
+    debug: true,
     devtool: 'cheap-source-map'
 });
 
@@ -23,10 +24,7 @@ _.forEach(config.entry, function(value, key){
 config.entry = devEntryConfig;
 
 config.plugins.push(new webpack.HotModuleReplacementPlugin(),
-                    new webpack.NoEmitOnErrorsPlugin(),
-                    new webpack.LoaderOptionsPlugin({
-                        debug: true
-                    }));
+                    new webpack.NoErrorsPlugin());
 
 module.exports = config;
 

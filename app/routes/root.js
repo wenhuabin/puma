@@ -5,16 +5,26 @@ const routes = {
     childRoutes: [{
     		path: 'about',
     		getComponent(location, cb) {
-    		    require.ensure([], require => {
-    		        cb(null, require('common/About'));
-    		    });
+                System.import("common/About").then(module => {
+    		    	cb(null, module.default);
+    			}).catch(err => {
+        			console.log("Chunk loading failed");
+    			}); 
+    		    //require.ensure([], require => {
+    		    //    cb(null, require('common/About'));
+    		    //});
     		}
 		},{
     		path: 'coming-soon',
     		getComponent(location, cb) {
-    		    require.ensure([], require => {
-    		        cb(null, require('common/ComingSoon'));
-    		    });
+                System.import("common/ComingSoon").then(module => {
+    		    	cb(null, module.default);
+    			}).catch(err => {
+        			console.log("Chunk loading failed");
+    			}); 
+    		    //require.ensure([], require => {
+    		    //    cb(null, require('common/ComingSoon'));
+    		    //});
     		}
 
 		},

@@ -30,54 +30,33 @@ var config = {
 		//									plugins: []
 		//							   }
 		// babel 优化：cacheDirectory
-        //'react-hot!babel?cacheDirectory=true&presets[]=react&presets[]=es2015&plugins[]=transform-decorators-legacy',
-        //noParse: [],
-		rules: [{
+        noParse: [],
+		loaders: [{
 			test: /\.(js|jsx)$/,
-            loader: "babel-loader",
-            exclude: /node_modules/,
-            options:{
-                cacheDirectory: true,
-                presets: ["react", "es2015"],
-                plugins: ["transform-decorators-legacy"],
-            }
+            loader: 'react-hot!babel?cacheDirectory=true&presets[]=react&presets[]=es2015&plugins[]=transform-decorators-legacy',
+            exclude: /node_modules/ 
 		},{
 			test: /\.(png|jpg)$/,
-            loader: "url-loader",
-            options: {
-                limit: 8192,
-                //name: 'images/[hash:8].[name].[ext]'
-            }
+			loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]'
 		},{
 			test: /\.scss$/,
-			use: [
-                "style-loader",
-                "css-loader",
-                "sass-loader"
-            ]
+			loader: 'style!css!sass'
 		},{
 			test: require.resolve('react'),
-          	use: [{
-          	    loader: 'expose-loader',
-          	    options: 'React'
-          	}]
+			loader: 'expose?React'
 		}],
 	},
     resolve: {
-		//root: [SRC_PATH, NODE_MODULE_PATH],
-		modules: [
-			SRC_PATH,
-			"node_modules"
-		],
-		enforceExtension: false,
+		root: [SRC_PATH, NODE_MODULE_PATH],
+		extenssions: ['', '.js', '.es6.js', '.jsx', '.json', '.scss', '.css', 'png', 'jpg'],
 		alias: {
-			'common': path.resolve(SRC_PATH, 'common'),
-			'sass': path.resolve(SRC_PATH, 'sass'),
-			'images': path.resolve(SRC_PATH, 'images'),
-			'routes': path.resolve(SRC_PATH, 'routes'),
-            'middlewares': path.resolve(SRC_PATH, 'middlewares'),
-            'redux': path.resolve(SRC_PATH, 'redux'),
-            'component': path.resolve(SRC_PATH, 'component'),
+			'common': 'common',
+			'sass': 'sass',
+			'images': 'images',
+			'routes': 'routes',
+            'middlewares': 'middlewares',
+            'redux': 'redux',
+            'component': 'component',
 		},
     },
 	plugins: [
