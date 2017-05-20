@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {Router, browserHistory} from 'react-router';
 import rootRoute from 'routes/root';
-import createStore from 'redux/configStore';
+import createStore from 'store/configStore';
 
 let store = createStore();
 

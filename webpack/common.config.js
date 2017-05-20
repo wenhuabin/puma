@@ -61,6 +61,12 @@ var config = {
           	    loader: 'expose-loader',
           	    options: 'React'
           	}]
+		},{
+			test: require.resolve('redux'),
+          	use: [{
+          	    loader: 'expose-loader',
+          	    options: 'redux'
+          	}]
 		}],
 	},
     resolve: {
@@ -76,7 +82,7 @@ var config = {
 			'images': path.resolve(SRC_PATH, 'images'),
 			'routes': path.resolve(SRC_PATH, 'routes'),
             'middlewares': path.resolve(SRC_PATH, 'middlewares'),
-            'redux': path.resolve(SRC_PATH, 'redux'),
+            //'redux': path.resolve(SRC_PATH, 'redux'),
             'component': path.resolve(SRC_PATH, 'component'),
 		},
     },
