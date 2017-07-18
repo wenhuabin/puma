@@ -61,13 +61,7 @@ var config = {
           	    loader: 'expose-loader',
           	    options: 'React'
           	}]
-		},{
-			test: require.resolve('redux'),
-          	use: [{
-          	    loader: 'expose-loader',
-          	    options: 'redux'
-          	}]
-		}],
+		}]
 	},
     resolve: {
 		//root: [SRC_PATH, NODE_MODULE_PATH],
