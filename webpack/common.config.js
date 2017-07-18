@@ -5,9 +5,7 @@ var SRC_PATH = path.resolve(__dirname, '../app');
 var STATIC_PATH = path.resolve(__dirname, '../static');
 
 var HTMLWebpackPlugin = require('html-webpack-plugin'),
-	CleanWebpackPlugin = require('clean-webpack-plugin'),
 	ReplaceBundleStringPlugin = require('replace-bundle-webpack-plugin');
-console.log(SRC_PATH);
 
 var config = {
     context: SRC_PATH,
@@ -50,11 +48,11 @@ var config = {
             }
 		},{
 			test: /\.scss$/,
-			use: [
-                "style-loader",
-                "css-loader",
-                "sass-loader"
-            ]
+			use:[
+				"style-loader",
+				"css-loader",
+				"sass-loader"
+			]
 		},{
 			test: require.resolve('react'),
           	use: [{
@@ -82,23 +80,18 @@ var config = {
     },
 	plugins: [
 		new HTMLWebpackPlugin({
-			filename: 'index.html',
+			filename: 'react.html',
 			template: path.resolve(SRC_PATH, 'template.html'),
             favicon: path.resolve(SRC_PATH, 'favicon.ico'),
 			chunks: ['main'],	
 			inject: 'body'
 		}),
-		new CleanWebpackPlugin(['static'],{
-			root: path.resolve(SRC_PATH, '../'),
-			verbose: true,
-			dry: false
-		}),
-		new ReplaceBundleStringPlugin([{
-            partten: /\/backend/g, // 这里看看怎么处理放到一个项目config文件里面去，不用这种形式
-            replacement: function () {
-                return '//api.wenhuabin.com';
-            }
-        }])
+		//new ReplaceBundleStringPlugin([{
+        //    partten: /\/backend/g, // 这里看看怎么处理放到一个项目config文件里面去，不用这种形式
+        //    replacement: function () {
+        //        return '//api.wenhuabin.com';
+        //    }
+        //}])
 	],
 };
 

@@ -21,7 +21,7 @@ new webpackDevServer(webpack(config), {
                 secure: false,
                 bypass: function(req, res, proxyOptions){
                     if(req.headers.accept.indexOf('html')!==-1) {
-                        return 'http://localhost:3000/static/index.html';
+                        return 'http://localhost:3000/static/react.html';
                     }
                 }
             }
