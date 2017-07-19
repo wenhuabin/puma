@@ -11,7 +11,8 @@ var SRC_PATH = path.resolve(__dirname, '../app');
 Object.assign(config.output, {
     publicPath: '/',
 	path: path.resolve(__dirname,'../dist'),
-    filename: '[chunkhash].' + version + '.js',
+    filename: '[id].' + version + '.js',
+    //filename: '[chunkhash].' + version + '.js',
     //filename: '[name].js',
 });
 config.module.rules[2]={
