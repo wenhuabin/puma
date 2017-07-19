@@ -37,20 +37,6 @@ var config = {
                 plugins: ["transform-decorators-legacy"],
             }
 		},{
-			test: /\.(png|jpg)$/,
-            loader: "url-loader",
-            options: {
-                limit: 8192,
-                //name: 'images/[hash:8].[name].[ext]'
-            }
-		},{
-			test: /\.scss$/,
-			use:[
-				"style-loader",
-				"css-loader",
-				"sass-loader"
-			]
-		},{
 			test: require.resolve('react'),
           	use: [{
           	    loader: 'expose-loader',

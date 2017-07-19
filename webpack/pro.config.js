@@ -14,7 +14,7 @@ Object.assign(config.output, {
 	path: path.resolve(__dirname,'../dist'),
     filename: 'js/[name].[chunkhash:8].' + version + '.js',
 });
-config.module.rules[2]={
+config.module.rules.push({
 	test: /\.scss$/,
 	use: ExtractTextPlugin.extract({
 		fallback: "style-loader",
@@ -23,7 +23,14 @@ config.module.rules[2]={
 			"sass-loader"
 		]
 	})
-};
+},{
+	test: /\.(png|jpg)$/,
+	loader: "url-loader",
+	options: {
+	    limit: 8192,
+	    name: 'images/[hash:8].' + version + '.[ext]'
+	}
+});
 config.plugins.push(
 	new ExtractTextPlugin({
         filename: 'css/[contenthash:8].' + version + '.css',

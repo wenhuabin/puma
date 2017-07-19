@@ -20,6 +20,20 @@ _.forEach(config.entry, function(value, key){
 
     devEntryConfig[key] = value;
 });
+config.module.rules.push({
+	test: /\.(png|jpg)$/,
+    loader: "url-loader",
+    options: {
+        limit: 8192,
+    }
+},{
+	test: /\.scss$/,
+	use:[
+		"style-loader",
+		"css-loader",
+		"sass-loader"
+	]
+});
 config.entry = devEntryConfig;
 config.devServer = {
     historyApiFallback : true
