@@ -81,14 +81,13 @@ var config = {
 			template: path.resolve(SRC_PATH, 'template.html'),
             favicon: path.resolve(SRC_PATH, 'favicon.ico'),
 			chunks: ['main'],	
-			inject: 'body'
+			inject: 'body',
+            minify: {
+                removeComments: true,
+                collapseWhitespace: true,
+                removeAttributeQuotes: true
+            }
 		}),
-		//new ReplaceBundleStringPlugin([{
-        //    partten: /\/backend/g, // 这里看看怎么处理放到一个项目config文件里面去，不用这种形式
-        //    replacement: function () {
-        //        return '//api.wenhuabin.com';
-        //    }
-        //}])
 	],
 };
 

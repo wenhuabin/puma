@@ -5,6 +5,7 @@
 static
 dist
 build
+configs/version.json
 node_modules
 npm-debug.log
 __build__
