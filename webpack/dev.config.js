@@ -21,7 +21,9 @@ _.forEach(config.entry, function(value, key){
     devEntryConfig[key] = value;
 });
 config.entry = devEntryConfig;
-config.devServer.historyApiFallback = true;
+config.devServer = {
+    historyApiFallback : true
+};
 
 config.plugins.push(new webpack.HotModuleReplacementPlugin(),
                     new webpack.NoEmitOnErrorsPlugin(),
