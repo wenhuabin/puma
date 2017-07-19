@@ -32,7 +32,9 @@
     "react-dom": "^15.5.4",
     "react-router": "^3.0.0",
     "webpack": "^2.5.1",
-    "webpack-dev-server": "^2.4.5"
+    "webpack-chunk-hash": "^0.4.0",
+    "webpack-dev-server": "^2.4.5",
+    "webpack-md5-hash": "0.0.5"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.14",

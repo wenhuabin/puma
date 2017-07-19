@@ -4,6 +4,7 @@ var config = require("./common.config"),
     webpack = require('webpack');
 
 var ExtractTextPlugin = require("extract-text-webpack-plugin"),
+    WebpackMd5Hash = require('webpack-md5-hash'),
 	CleanWebpackPlugin = require('clean-webpack-plugin');
 const version = require('../configs/version').version;
 var SRC_PATH = path.resolve(__dirname, '../app');
@@ -11,9 +12,7 @@ var SRC_PATH = path.resolve(__dirname, '../app');
 Object.assign(config.output, {
     publicPath: '/',
 	path: path.resolve(__dirname,'../dist'),
-    filename: '[id].' + version + '.js',
-    //filename: '[chunkhash].' + version + '.js',
-    //filename: '[name].js',
+    filename: '[chunkhash:8].' + version + '.js',
 });
 config.module.rules[2]={
 	test: /\.scss$/,
@@ -27,7 +26,7 @@ config.module.rules[2]={
 };
 config.plugins.push(
 	new ExtractTextPlugin({
-	 filename: 'css/[id].[chunkhash].' + version + '.css',
+        filename: 'css/[contenthash:8].' + version + '.css',
 	    //disable: false,
 	    //allChunks: true
 	}),
