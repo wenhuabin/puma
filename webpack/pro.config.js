@@ -12,7 +12,7 @@ var SRC_PATH = path.resolve(__dirname, '../app');
 Object.assign(config.output, {
     publicPath: '/',
 	path: path.resolve(__dirname,'../dist'),
-    filename: '[chunkhash:8].' + version + '.js',
+    filename: 'js/[name].[chunkhash:8].' + version + '.js',
 });
 config.module.rules[2]={
 	test: /\.scss$/,
