@@ -21,10 +21,9 @@
         font-size: 18px;
         color: #444;
     }
-    .setting-box,
+    .nav-list,
     .logout{
         float: right;
-        margin-right: 10px;
         line-height: 60px;
         width: 100px;
         text-align: center;
@@ -35,7 +34,7 @@
         font-size: 16px;
         color: #787C80;
     }
-    .setting-box{
+    .nav-list{
         position: relative;
         min-height: 60px;
         color: #787C80;
@@ -43,12 +42,27 @@
         border-bottom-left-radius: 3px;
         z-index: 10;
         ul{
-            display: none;
+            //display: none;
             position: absolute;
             width: 100px;
             background: #fff;
-            box-shadow: 0 0 0 1px hsla(0,0%,100%,.85) inset, 0 0.5em 1em rgba(0, 0, 0, 0.6);
+    		border-bottom-right-radius: 3px;
+    		border-bottom-left-radius: 3px;
+            box-shadow: 0 0 0 1px hsla(0,0%,100%,.65) inset, 0 0.3em 1em rgba(0, 0, 0, 0.3);
         }
+		.nav{
+        	line-height: 60px;
+        	height: 60px;
+        	width: 100px;
+        	font-size: 16px;
+        	text-align: center;
+        	cursor: pointer;
+		}
+		a{
+			display: block;
+        	color: #787C80;
+		}
+		a,
         li{
             height: 45px;
             line-height: 45px;
@@ -60,7 +74,7 @@
         }
 
     }
-    .setting-box:hover{
+    .nav-list:hover{
         background-color: #f5f5f5;
     }
 }
