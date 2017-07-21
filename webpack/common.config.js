@@ -53,7 +53,7 @@ var config = {
 		enforceExtension: false,
 		alias: {
 			'common': path.resolve(SRC_PATH, 'common'),
-			'sass': path.resolve(SRC_PATH, 'sass'),
+			'scss': path.resolve(SRC_PATH, 'scss'),
 			'images': path.resolve(SRC_PATH, 'images'),
 			'routes': path.resolve(SRC_PATH, 'routes'),
             'middlewares': path.resolve(SRC_PATH, 'middlewares'),

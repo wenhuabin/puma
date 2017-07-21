@@ -1,4 +1,3 @@
-require('sass/app.scss');
 import {Component} from 'react';
 import {connect} from 'react-redux';
 import {setProfile} from './HomeAction';

@@ -1,4 +1,3 @@
-require('sass/app.scss');
 import {Component} from 'react';
 
 class ComingSoon extends Component {
