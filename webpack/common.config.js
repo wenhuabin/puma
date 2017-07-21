@@ -52,7 +52,7 @@ var config = {
 		],
 		enforceExtension: false,
 		alias: {
-			'common': path.resolve(SRC_PATH, 'common'),
+			'common': path.resolve(SRC_PATH, 'component/common'),
 			'scss': path.resolve(SRC_PATH, 'scss'),
 			'images': path.resolve(SRC_PATH, 'images'),
 			'routes': path.resolve(SRC_PATH, 'routes'),

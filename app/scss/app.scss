@@ -1,13 +1,7 @@
 @import 'common/_common';
 
-.first{
-    width: 400px;
-    height: 400px;
-    font-size: 24px;
-    .clo-1{
-        color: red;
-    }
-    .clo-2{
-        color: green;
-    }
+.page{
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
 }

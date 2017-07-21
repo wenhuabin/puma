@@ -1,6 +1,7 @@
 require('scss/app.scss');
 import {Component} from 'react';
 import {PropTypes} from 'prop-types';
+import Nav from 'common/Nav';
 
 class App extends Component {
   constructor(props){
@@ -9,7 +10,8 @@ class App extends Component {
   //<img src={require('images/bike.png')} />
   render() {
     return (
-		<div className="first">
+		<div className="page">
+            <Nav />
             {this.props.children} 
 		</div>
 	);
