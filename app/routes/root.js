@@ -1,11 +1,11 @@
 const routes = {
     path: '/',
     component: require('component/App'),
-    indexRoute: {component: require('common/Home')},
+    indexRoute: {component: require('component/home/Home')},
     childRoutes: [{
     		path: 'about',
     		getComponent(location, cb) {
-                System.import("common/About").then(module => {
+                System.import("component/About").then(module => {
     		    	cb(null, module.default);
     			}).catch(err => {
         			console.log("Chunk loading failed");
@@ -14,7 +14,7 @@ const routes = {
 		},{
     		path: 'coming-soon',
     		getComponent(location, cb) {
-                System.import("common/ComingSoon").then(module => {
+                System.import("component/ComingSoon").then(module => {
     		    	cb(null, module.default);
     			}).catch(err => {
         			console.log("Chunk loading failed");
