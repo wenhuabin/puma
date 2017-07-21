@@ -1,5 +1,6 @@
 require('sass/app.scss');
-import {Component, PropTypes} from 'react';
+import {Component} from 'react';
+import {PropTypes} from 'prop-types';
 
 class App extends Component {
   constructor(props){

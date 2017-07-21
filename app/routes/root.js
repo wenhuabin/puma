@@ -10,9 +10,6 @@ const routes = {
     			}).catch(err => {
         			console.log("Chunk loading failed");
     			}); 
-    		    //require.ensure([], require => {
-    		    //    cb(null, require('common/About'));
-    		    //});
     		}
 		},{
     		path: 'coming-soon',
@@ -22,11 +19,7 @@ const routes = {
     			}).catch(err => {
         			console.log("Chunk loading failed");
     			}); 
-    		    //require.ensure([], require => {
-    		    //    cb(null, require('common/ComingSoon'));
-    		    //});
     		}
-
 		},
     ],
 };
