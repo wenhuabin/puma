@@ -39,7 +39,7 @@ class HeaderNav extends Component {
               	<div className="nav-list">
               	    <Link className="nav" to={'/about'}>关于我</Link>
         	  	  </div>
-              	  <div className="nav-list" style={{}}>
+              	  <div className="nav-list">
               	      <div className="nav" onMouseOver={()=>this.toggleShowList(2)}>设置</div>
               	      <ul className="items">
               	          <li className="item"><Link to={'/cjs'}>ChartJS</Link></li>
