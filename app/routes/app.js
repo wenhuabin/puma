@@ -15,10 +15,10 @@ module.exports = {
     childRoutes: [{
             path: 'about',
             components: require('component/About')
-        },{
-            path: 'coming-soon',
-            components: require('component/About')
         },
-        require('./demo'),
+        require('./demo'),{
+            path: '*', //处理不存在的路由
+            components: require('component/ComingSoon')
+        },
 	]
 };

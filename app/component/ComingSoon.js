@@ -1,3 +1,4 @@
+require('scss/coming.scss');
 import {Component} from 'react';
 
 class ComingSoon extends Component {
@@ -7,8 +8,9 @@ class ComingSoon extends Component {
 	
   render() {
     return (
-        <div className="clo-2">
-		    Coming Soon !
+        <div className="coming-soon">
+            <img src={require('images/logo.jpg')} />
+		    Page Not Found, Coming Soon !
         </div>
 	);
   }
