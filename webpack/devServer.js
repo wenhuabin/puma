@@ -27,6 +27,7 @@ new webpackDevServer(webpack(config), {
             }
     ],
     quiet: false,
+	disableHostCheck: true, //webpack-dev-server 2.4.4 add host check，casuse Invalid Host header error
     noInfo: false,
     headers: { 'Access-Control-Allow-Origin': '*' },
     stats: {colors: true }

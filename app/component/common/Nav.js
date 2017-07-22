@@ -50,8 +50,8 @@ class HeaderNav extends Component {
         return (
             <header className="header">
           		<img className="logo" src={require('images/logo.jpg')} />
-                <div className="brand">SpaceX</div>
-                <div className="logout">退出登录</div>
+                <div className="brand">{this.props.uname ? this.props.uname : 'SpaceX'}</div>
+                <div className="logout" onClick={this.props.onLoginClick}>{this.props.uname ? '退出登录' : '登录'}</div>
 				<div className="nav-bar">
 					{navs}
 				</div>

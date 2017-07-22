@@ -57,7 +57,7 @@ var config = {
 			'images': path.resolve(SRC_PATH, 'images'),
 			'routes': path.resolve(SRC_PATH, 'routes'),
             'middlewares': path.resolve(SRC_PATH, 'middlewares'),
-            //'redux': path.resolve(SRC_PATH, 'redux'),
+            'utils': path.resolve(SRC_PATH, 'utils'),
             'component': path.resolve(SRC_PATH, 'component'),
 		},
     },
