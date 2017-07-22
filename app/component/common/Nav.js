@@ -37,7 +37,7 @@ class HeaderNav extends Component {
 					);
 				});
 				navs.push(
-              		<div className="nav-list" key={e.key} onMouseLeave={()=>this.setListShow(-1)} style={this.state.isCurrent.toString()[0] == e.key ? {height: 60 * e.child.length + 'px'} : {height: '60px'}}>
+              		<div className="nav-list" key={e.key} onMouseLeave={()=>this.setListShow(-1)} style={this.state.isListShow == e.key ? {height: 60 * e.child.length + 'px'} : {height: '60px'}}>
               		    <div className={this.state.isCurrent.toString()[0] == e.key ? "nav icurrent" : "nav"} onClick={()=>this.setCurrent(e.key)} onMouseOver={()=>this.setListShow(e.key)}>{e.name}</div>
               		    <ul className={this.state.isListShow == e.key ? 'items show': 'items'}>
 							{cnavs}
