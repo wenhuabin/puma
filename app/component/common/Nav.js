@@ -10,9 +10,9 @@ class HeaderNav extends Component {
             isChildShow: [],
 			isListShow: -1,
             navs: [
+                {name: '关于我', key: 3, url: '/about'},
+                {name: 'Demo', key: 1, url: '', child: [{name: 'Canvas', key: 10, url: '/demo/canvas'}, {name: 'SVG', key: 11, url: '/demo/svg'},{name: 'Echart组件', key: 12, url: '/demo/echart'},{name: 'D3-组件', key: 13, url: '/demo/d3'},{name: 'ChartJS', key: 14, url: '/demo/cjs'}, {name: '通用组件', key: 15, url: '/demo/component'}]},
                 {name: '主页', key: 0, url: '/'},
-                {name: 'Demo', key: 1, url: '', child: [{name: 'Canvas', key: 10, url: '/canvas'}, {name: 'SVG', key: 11, url: '/'},{name: 'Echart组件', key: 12, url: '/echart'},{name: 'D3-组件', key: 13, url: '/d3'},{name: 'ChartJS', key: 14, url: '/cjs'}, {name: '通用组件', key: 15, url: '/component'}]},
-                {name: 'About', key: 3, url: '/about'},
             ],
         };
     }
@@ -39,7 +39,7 @@ class HeaderNav extends Component {
 			if(!e.child){
 				navs.push(
               		<div className="nav-list" key={e.key}>
-              		    <Link className="nav" to={e.url}>关于我</Link>
+              		    <Link className="nav" to={e.url}>{e.name}</Link>
         	  		</div>
 				);
 			}else{

@@ -1,27 +1,17 @@
-const routes = {
-    path: '/',
-    component: require('component/App'),
-    indexRoute: {component: require('component/home/Home')},
-    childRoutes: [{
-    		path: 'about',
-    		getComponent(location, cb) {
+module.exports = {
+    childRoutes: [
+        require('./app'),
+        {
+            path: 'login',
+            getComponent(location, cb) {
                 System.import("component/About").then(module => {
     		    	cb(null, module.default);
-    			}).catch(err => {
-        			console.log("Chunk loading failed");
-    			}); 
-    		}
-		},{
-    		path: 'coming-soon',
-    		getComponent(location, cb) {
-                System.import("component/ComingSoon").then(module => {
-    		    	cb(null, module.default);
-    			}).catch(err => {
-        			console.log("Chunk loading failed");
-    			}); 
-    		}
-		},
-    ],
+    			}) 
+            },
+            childRoutes: [{
+                path: 'reset',
+                components: require('component/About')
+            }]
+        }
+    ]
 };
-
-module.exports = routes; 
