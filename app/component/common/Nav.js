@@ -37,7 +37,7 @@ class HeaderNav extends Component {
 					);
 				});
 				navs.push(
-              		<div className="nav-list" key={e.key}>
+              		<div className="nav-list" key={e.key} onMouseLeave={()=>this.setListShow(-1)} style={this.state.isCurrent.toString()[0] == e.key ? {height: 60 * e.child.length + 'px'} : {height: '60px'}}>
               		    <div className={this.state.isCurrent.toString()[0] == e.key ? "nav icurrent" : "nav"} onClick={()=>this.setCurrent(e.key)} onMouseOver={()=>this.setListShow(e.key)}>{e.name}</div>
               		    <ul className={this.state.isListShow == e.key ? 'items show': 'items'}>
 							{cnavs}
@@ -52,7 +52,9 @@ class HeaderNav extends Component {
           		<img className="logo" src={require('images/logo.jpg')} />
                 <div className="brand">SpaceX</div>
                 <div className="logout">退出登录</div>
-				{navs}
+				<div className="nav-bar">
+					{navs}
+				</div>
             </header>
         );
     }
