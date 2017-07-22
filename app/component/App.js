@@ -2,6 +2,7 @@ require('scss/app.scss');
 import {Component} from 'react';
 import {PropTypes} from 'prop-types';
 import Nav from 'common/Nav';
+import Dashboard from 'component/Dashboard';
 
 class App extends Component {
   constructor(props){
@@ -19,7 +20,7 @@ class App extends Component {
     return (
 		<div className="page">
             <Nav navs={this.state.navs}/>
-            {this.props.children} 
+            {this.props.children || <Dashboard />} 
 		</div>
 	);
   }

@@ -11,7 +11,7 @@ module.exports = {
     //    }
     //},
     component: require('component/App'),
-    indexRoute: {component: require('component/home/Home')},
+    //indexRoute: {component: require('component/About')},
     childRoutes: [{
             path: 'about',
             components: require('component/About')
