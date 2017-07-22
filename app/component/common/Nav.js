@@ -3,7 +3,8 @@ import {Component} from 'react';
 import { Link } from 'react-router';
 
 class HeaderNav extends Component {
-    constructor(props, context) { super(props, context);
+    constructor(props, context){
+		super(props, context);
         this.state = {
             isCurrent: -1,
             isChildShow: [],
@@ -20,8 +21,11 @@ class HeaderNav extends Component {
 		this.setState({isCurrent: key});
     }
 
-    toggleShowList(key){
-
+    setListShow(key){
+		console.log(key);
+		this.setState({isListShow: key}, ()=>{
+			console.log('set ', this.state.isListShow);
+		});
 	}
 
     toggleShowChild(key){
@@ -31,6 +35,7 @@ class HeaderNav extends Component {
     }
       
     render() {
+		console.log('render ', this.state.isListShow);
         return (
             <header className="header">
           		<img className="logo" src={require('images/logo.jpg')} />
@@ -40,15 +45,15 @@ class HeaderNav extends Component {
               	    <Link className="nav" to={'/about'}>关于我</Link>
         	  	  </div>
               	  <div className="nav-list">
-              	      <div className="nav" onMouseOver={()=>this.toggleShowList(2)}>设置</div>
-              	      <ul className="items">
+              	      <div className="nav" onMouseOver={()=>this.setListShow(2)}>设置</div>
+              	      <ul className={this.state.isListShow == '2' ? 'items show': 'items'} onBlur={()=>this.setListShow(-1)}>
               	          <li className="item"><Link to={'/cjs'}>ChartJS</Link></li>
               	          <li className="item"><Link to={'/canvas'}>Canvas</Link></li>
               	      </ul>
         	  	  </div>
-              	  <div className="nav-list" >
-              	      <div className="nav" onMouseOver={()=>this.toggleShowList(2)}>组件</div>
-              	      <ul className="items">
+              	  <div className="nav-list">
+              	      <div className="nav" onMouseOver={()=>this.setListShow(3)}>组件</div>
+              	      <ul className={this.state.isListShow == '3' ? 'items show': 'items'} onBlur={()=>this.setListShow(-1)}>
               	          <li className="item"><Link to={'/cjs'}>ChartJS</Link></li>
               	          <li className="item"><Link to={'/canvas'}>Canvas</Link></li>
               	      </ul>
