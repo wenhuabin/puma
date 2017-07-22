@@ -10,6 +10,9 @@ module.exports = {
             path: 'cjs',
             components: require('component/About')
         },{
+            path: 'd3',
+            components: require('component/About')
+        },{
             path: 'echart',
             components: require('component/About')
         },{

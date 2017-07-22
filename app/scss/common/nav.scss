@@ -63,6 +63,7 @@
 			//-webkit-transition: border-bottom 2s;	/* Safari 和 Chrome */
 			//-o-transition: border-bottom 2s;
 		}
+		.icurrent,
 		.nav:hover{
 			border-bottom: 2px solid #5AC88B;
 		}
@@ -80,6 +81,9 @@
         li:hover{
             background-color: #dcdcdc;
         }
+		.current{
+            background-color: #dcdcdc;
+		}
 
     }
     .nav-list:hover{
@@ -87,6 +91,5 @@
     }
 	.show{
 		display: block !important;
-
 	}
 }

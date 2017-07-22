@@ -22,7 +22,6 @@ class HeaderNav extends Component {
     }
 
     setListShow(key){
-		console.log(key);
 		this.setState({isListShow: key});
 	}
 
@@ -35,23 +34,23 @@ class HeaderNav extends Component {
     render() {
 		let navs = [];
 		let cnavs = [];
-		this.state.navs.forEach((e, index)=>{
+		this.props.navs.forEach((e, index)=>{
 			if(!e.child){
 				navs.push(
               		<div className="nav-list" key={e.key}>
-              		    <Link className="nav" to={e.url}>{e.name}</Link>
+              		    <Link className={this.state.isCurrent == e.key ? "nav icurrent" : "nav"} onClick={()=>this.setCurrent(e.key)} to={e.url}>{e.name}</Link>
         	  		</div>
 				);
 			}else{
 				cnavs = [];
 				e.child.forEach((c, cindex)=>{
 					cnavs.push(
-              		     <li className="item" onClick={()=>this.setCurrent(c.key)} key={c.key}><Link to={c.url}>{c.name}</Link></li>
+              		     <li className={this.state.isCurrent == c.key ? "item current" : "item"} onClick={()=>this.setCurrent(c.key)} key={c.key}><Link to={c.url}>{c.name}</Link></li>
 					);
 				});
 				navs.push(
               		<div className="nav-list" key={e.key}>
-              		    <div className="nav" onMouseOver={()=>this.setListShow(e.key)}>{e.name}</div>
+              		    <div className={this.state.isCurrent.toString()[0] == e.key ? "nav icurrent" : "nav"} onClick={()=>this.setCurrent(e.key)} onMouseOver={()=>this.setListShow(e.key)}>{e.name}</div>
               		    <ul className={this.state.isListShow == e.key ? 'items show': 'items'}>
 							{cnavs}
               		    </ul>
@@ -60,7 +59,6 @@ class HeaderNav extends Component {
 			}
 
 		});
-		console.log('navs\n', navs);
         return (
             <header className="header">
           		<img className="logo" src={require('images/logo.jpg')} />
@@ -73,25 +71,3 @@ class HeaderNav extends Component {
 };
 
 module.exports = HeaderNav;
-
-//<div className="nav-list">
-//              	    <Link className="nav" to={'/about'}>关于我</Link>
-//        	  	</div>
-//              	<div className="nav-list">
-//              	    <div className="nav" onMouseOver={()=>this.setListShow(2)}>设置</div>
-//              	    <ul className={this.state.isListShow == '2' ? 'items show': 'items'}>
-//              	        <li className="item" onClick={()=>this.setCurrent(2)}><Link to={'/'}>ChartJS</Link></li>
-//              	        <li className="item"><Link to={'/'}>Canvas</Link></li>
-//              	    </ul>
-//        	  	</div>
-//              	<div className="nav-list">
-//              	    <div className="nav" onMouseOver={()=>this.setListShow(3)}>组件</div>
-//              	    <ul className={this.state.isListShow == '3' ? 'items show': 'items'}>
-//              	        <li className="item"><Link to={'/'}>ChartJS</Link></li>
-//              	        <li className="item"><Link to={'/'}>Canvas</Link></li>
-//              	    </ul>
-//        	  	</div>
-//              	<div className="nav-list">
-//                	  <Link className="nav" to={'/about'}>首页</Link>
-//        		</div>
-//
