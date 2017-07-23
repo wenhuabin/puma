@@ -1,6 +1,5 @@
 module.exports = {
     path: 'demo',
-
     getComponent(location, cb) {
         System.import("component/About").then(module => {
     		cb(null, module.default);
@@ -8,22 +7,46 @@ module.exports = {
     },
     childRoutes: [{
             path: 'cjs',
-            components: require('component/ComingSoon')
+            getComponent(location, cb) {
+                System.import("component/ComingSoon").then(module => {
+            		cb(null, module.default);
+            	}) 
+            },
         },{
             path: 'd3',
-            components: require('component/ComingSoon')
+            getComponent(location, cb) {
+                System.import("component/ComingSoon").then(module => {
+            		cb(null, module.default);
+            	}) 
+            },
         },{
             path: 'echart',
-            components: require('component/ComingSoon')
+            getComponent(location, cb) {
+                System.import("component/ComingSoon").then(module => {
+            		cb(null, module.default);
+            	}) 
+            },
         },{
             path: 'canvas',
-            components: require('component/ComingSoon')
+            getComponent(location, cb) {
+                System.import("component/ComingSoon").then(module => {
+            		cb(null, module.default);
+            	}) 
+            },
         },{
             path: 'svg',
-            components: require('component/ComingSoon')
+            getComponent(location, cb) {
+                System.import("component/ComingSoon").then(module => {
+            		cb(null, module.default);
+            	}) 
+            },
         },{
             path: 'component',
-            components: require('component/ComingSoon')
+            getComponent(location, cb) {
+                System.import("component/ComingSoon").then(module => {
+            		cb(null, module.default);
+            	}) 
+            },
         },
     ]
 };

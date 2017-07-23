@@ -14,11 +14,20 @@ module.exports = {
     //indexRoute: {component: require('component/About')},
     childRoutes: [{
             path: 'about',
-            components: require('component/About')
+            getComponent(location, cb) {
+                System.import("component/About").then(module => {
+            		cb(null, module.default);
+            	}) 
+            },
         },
-        require('./demo'),{
+        require('./demo'),
+        {
             path: '*', //处理不存在的路由
-            components: require('component/ComingSoon')
-        },
+            getComponent(location, cb) {
+                System.import("component/ComingSoon").then(module => {
+            		cb(null, module.default);
+            	}) 
+            },
+        }
 	]
 };
