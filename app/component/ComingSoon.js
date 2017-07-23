@@ -10,10 +10,9 @@ class ComingSoon extends Component {
     return (
         <div className="coming-soon">
             <img src={require('images/logo.jpg')} />
-		    Page Not Found, Coming Soon !
+		    Sorry, coming soon !
         </div>
 	);
   }
 };
-
-module.exports = ComingSoon;
+export default ComingSoon;

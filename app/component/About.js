@@ -39,4 +39,4 @@ class About extends Component {
   }
 };
 
-module.exports = About;
+export default About;

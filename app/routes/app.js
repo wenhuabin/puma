@@ -10,8 +10,11 @@ module.exports = {
     //        });
     //    }
     //},
-    component: require('component/App'),
-    //indexRoute: {component: require('component/About')},
+    getComponent(location, cb) {
+        System.import("component/App").then(module => {
+    		cb(null, module.default);
+    	}) 
+    },
     childRoutes: [{
             path: 'about',
             getComponent(location, cb) {

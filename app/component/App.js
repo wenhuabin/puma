@@ -6,7 +6,9 @@ import Dashboard from 'component/Dashboard';
 import {connect} from 'react-redux';
 import {setProfile} from 'store/common/BaseAction';
 
-class App extends Component { constructor(props, context) { super(props, context);
+class App extends Component{
+    constructor(props, context){
+      super(props, context);
       this.state = {
           navs: [
               {name: '主页', key: 0, url: '/'},
@@ -66,7 +68,7 @@ const mapDispatch = (dispatch) => {
     };
 };
 
-module.exports = connect(
+export default App = connect(
         (state) => mapStore(state.token),
        	mapDispatch 
 )(App);

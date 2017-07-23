@@ -122,7 +122,7 @@ const mapDispatch = (dispatch) => {
     };
 };
 
-module.exports = connect(
+export default Login = connect(
         (state) => mapStore(state.token),
        	mapDispatch 
 )(Login);

@@ -1,11 +1,7 @@
 module.exports = {
     path: 'demo',
-    getComponent(location, cb) {
-        System.import("component/About").then(module => {
-    		cb(null, module.default);
-    	}) 
-    },
-    childRoutes: [{
+    childRoutes: [
+        {
             path: 'cjs',
             getComponent(location, cb) {
                 System.import("component/ComingSoon").then(module => {
