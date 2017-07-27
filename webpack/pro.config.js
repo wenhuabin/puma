@@ -33,9 +33,9 @@ config.module.rules.push({
 });
 config.plugins.push(
 	new ExtractTextPlugin({
-        filename: 'css/[contenthash:8].' + version + '.css',
-	    //disable: false,
-	    //allChunks: true
+        filename: 'css/[id].[contenthash:8].' + version + '.css',
+	    allChunks: true, 
+	    disable: false,
 	}),
 	new CleanWebpackPlugin(['dist'],{
 		root: path.resolve(__dirname, '../'),
