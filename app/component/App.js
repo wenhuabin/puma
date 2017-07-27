@@ -1,4 +1,4 @@
-require('scss/app.scss');
+import 'scss/app.scss';
 import {Component} from 'react';
 import {PropTypes} from 'prop-types';
 import Nav from 'common/Nav';

@@ -48,6 +48,7 @@ config.plugins.push(
         },
         sourceMap: false,
         minimize: true,
+        parallel: true,
         compress: {
             drop_debugger: true,
             warnings: false,

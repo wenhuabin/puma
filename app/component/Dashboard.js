@@ -1,4 +1,4 @@
-require('scss/dashboard.scss');
+import 'scss/dashboard.scss';
 import {Component} from 'react';
 
 class Dashboard extends Component {

@@ -1,4 +1,4 @@
-require('scss/about.scss');
+import 'scss/about.scss';
 import {Component} from 'react';
 
 class About extends Component {

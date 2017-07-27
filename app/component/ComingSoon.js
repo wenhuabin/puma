@@ -1,4 +1,4 @@
-require('scss/coming.scss');
+import 'scss/coming.scss';
 import {Component} from 'react';
 
 class ComingSoon extends Component {

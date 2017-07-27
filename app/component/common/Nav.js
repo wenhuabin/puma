@@ -1,4 +1,4 @@
-require('scss/common/nav.scss');
+import 'scss/common/nav.scss';
 import {Component} from 'react';
 import { Link } from 'react-router';
 
