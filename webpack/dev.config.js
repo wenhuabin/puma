@@ -39,7 +39,12 @@ config.devServer = {
     historyApiFallback : true
 };
 
-config.plugins.push(new webpack.HotModuleReplacementPlugin(),
+config.plugins.push(new webpack.DefinePlugin({
+		              	'process.env': {
+		              	  NODE_ENV: JSON.stringify('development')
+		              	}
+		            }),
+                    new webpack.HotModuleReplacementPlugin(),
                     new webpack.NoEmitOnErrorsPlugin(),
                     new webpack.LoaderOptionsPlugin({
                         debug: true

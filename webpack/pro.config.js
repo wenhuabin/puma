@@ -32,6 +32,11 @@ config.module.rules.push({
 	}
 });
 config.plugins.push(
+	new webpack.DefinePlugin({
+	  	'process.env': {
+	  	  NODE_ENV: JSON.stringify('production')
+	  	}
+	}),
 	new ExtractTextPlugin({
         filename: 'css/[id].[contenthash:8].' + version + '.css',
 	    allChunks: true, 
