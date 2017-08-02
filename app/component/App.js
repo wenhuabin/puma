@@ -23,7 +23,6 @@ class App extends Component{
         if(token && token.email){
 			this.props.setToken({uname: token.uname, email: token.email});
 		}
-
 	}
 
     onLoginClick(){
@@ -50,6 +49,7 @@ class App extends Component{
     }
 };
 
+//define by react-router, in this way you can get route context and make link changes
 App.contextTypes = {
     router: PropTypes.object.isRequired
 };
