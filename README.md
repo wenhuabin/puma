@@ -6,3 +6,5 @@
 - es6
 - sass
 - webpack
+
+2017.10.16  Update React to React 16
