@@ -43,6 +43,13 @@ module.exports = {
             		cb(null, module.default);
             	}) 
             },
+        },{
+            path: 'error-border',
+            getComponent(location, cb) {
+                System.import("component/ComingSoon").then(module => {
+            		cb(null, module.default);
+            	}) 
+            },
         },
     ]
 };
