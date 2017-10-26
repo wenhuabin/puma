@@ -10,7 +10,7 @@ class ComingSoon extends Component {
     return (
         <div className="coming-soon">
             <img src={require('images/logo.jpg')} />
-		    Sorry, coming soon !
+		    SORRY, COMING SOON!
         </div>
 	);
   }
