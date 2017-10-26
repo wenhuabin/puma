@@ -23,20 +23,14 @@ class BuggyCounter extends Component {
   }
 }
 
-class ErrorComponent extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return (
-        <div>
-            <ErrorBorder>
-                <BuggyCounter />
-            </ErrorBorder>
-        </div>
-    );
-  }
+function ErrorComponent(){
+  return (
+      <div>
+          <ErrorBorder>
+              <BuggyCounter />
+          </ErrorBorder>
+      </div>
+  );
 }
 
 export default ErrorComponent;
