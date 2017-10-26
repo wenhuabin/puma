@@ -46,7 +46,7 @@ module.exports = {
         },{
             path: 'error-border',
             getComponent(location, cb) {
-                System.import("component/ComingSoon").then(module => {
+                System.import("component/error/ErrorComponent").then(module => {
             		cb(null, module.default);
             	}) 
             },
