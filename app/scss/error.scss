@@ -2,7 +2,7 @@
     position: relative;
     padding: 20px 0 0;
     width: 100%;
-    height: calc(100% - 140px);
+    height: calc(100% - 200px);
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
@@ -16,12 +16,14 @@
             height: 80px;
             line-height: 80px;
             vertical-align: top;
+            line-height: 80px;
         }
     }
     h1{
         text-align: center;
         height: 80px;
         line-height: 80px;
+        font-size: 18px;
     }
 }
 

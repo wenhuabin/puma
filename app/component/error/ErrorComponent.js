@@ -23,7 +23,7 @@ class BuggyCounter extends Component {
     return (
         <div className="counter">
             <span className="label">点击5次后出发组件 crash：</span>
-            <span onClick={this.handleClick}>{this.state.counter}</span>
+            <span onClick={this.handleClick} style={{cursor: 'pointer'}}>{this.state.counter}</span>
         </div>
     );
   }
@@ -35,7 +35,7 @@ class ErrorComponent extends Component {
   }
   render(){
     return [
-        <h2 style={{backgroundColor: '#fff', lineHeight: '60px', height: '60px', fontSize: '28px', textAlign: 'center', }}>Error Boundaries Test</h2>,
+        <h2 style={{backgroundColor: '#fff', lineHeight: '120px', height: '120px', fontSize: '28px', textAlign: 'center', }}>Error Boundaries Test</h2>,
         <div className="error">
             <ErrorBorder>
                 <BuggyCounter />
