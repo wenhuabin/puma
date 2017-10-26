@@ -1,5 +1,5 @@
 import {Component} from 'react';
-import ErrorBorder from './ErrorComponent';
+import ErrorBorder from './ErrorBorder';
 
 class BuggyCounter extends Component {
   constructor(props) {
@@ -27,7 +27,7 @@ class ErrorComponent extends Component {
   constructor(props) {
     super(props);
   }
-  
+
   render() {
     return (
         <div>
