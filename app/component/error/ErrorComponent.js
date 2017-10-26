@@ -1,3 +1,4 @@
+import 'scss/error.scss';
 import {Component} from 'react';
 import ErrorBorder from './ErrorBorder';
 
@@ -19,18 +20,29 @@ class BuggyCounter extends Component {
       // Simulate a JS error
       throw new Error('I crashed!');
     }
-    return <h1 onClick={this.handleClick}>{this.state.counter}</h1>;
+    return (
+        <div className="counter">
+            <span className="label">点击5次后出发组件 crash：</span>
+            <span onClick={this.handleClick}>{this.state.counter}</span>
+        </div>
+    );
   }
 }
 
-function ErrorComponent(){
-  return (
-      <div>
-          <ErrorBorder>
-              <BuggyCounter />
-          </ErrorBorder>
-      </div>
-  );
+class ErrorComponent extends Component {
+  constructor(props) {
+    super(props);
+  }
+  render(){
+    return [
+        <h2 style={{backgroundColor: '#fff', lineHeight: '60px', height: '60px', fontSize: '28px', textAlign: 'center', }}>Error Boundaries Test</h2>,
+        <div className="error">
+            <ErrorBorder>
+                <BuggyCounter />
+            </ErrorBorder>
+        </div>
+    ];
+  }
 }
 
 export default ErrorComponent;

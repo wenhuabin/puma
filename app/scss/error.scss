@@ -1,0 +1,27 @@
+.error{
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+    height: calc(100% - 140px);
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+
+    .counter{
+        text-align: center;
+        span{
+            display: inline-block;
+            margin-right: 10px;
+            padding: 0 10px;
+            height: 80px;
+            line-height: 80px;
+            vertical-align: top;
+        }
+    }
+    h1{
+        text-align: center;
+        height: 80px;
+        line-height: 80px;
+    }
+}
+
