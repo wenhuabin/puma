@@ -33,7 +33,7 @@ class About extends Component {
 				<li className="hide">蔚来汽车：<a href="https://login.nio.com/login" target="_blank" title="基于&nbsp;Java Spring/JSP/jQuery/SASS&nbsp;技术栈，通过&nbsp;rem&nbsp;和屏幕&nbsp;dpr&nbsp;适配移动版页面">单点登录系统 </a><span title="基于&nbsp;Express/EJS&nbsp;模板&nbsp;/jQuery&nbsp;技术栈，通过&nbsp;rem&nbsp;和屏幕&nbsp;dpr&nbsp;适配移动版页面">LifeStyle项目</span><span title="基于&nbsp;PHP/Vue/Vuex/vue-router/Webpack/SASS&nbsp;技术栈，前后端分离">车辆后台管理系统</span></li>
 				<li>小熊快跑：<a href="https://guanjia.xxkuaipao.com" target="_blank" title="基于&nbsp;React/react-redux/react-router/SASS/Webpack技术栈，前后端分离">小熊管家</a><span title="基于&nbsp;Flask/Jinjia2/LESS&nbsp;技术栈">包月健身管理后台/商家后台</span></li>
 			</ol>
-		    <footer className="footer">{'©'}  Copyright 2017 by @wenhuabin. All Right Reserved.</footer>
+		    <footer className="footer">{'©'}  Copyright 2018 by @wenhuabin. All Right Reserved.</footer>
 		</div>
 	);
   }
