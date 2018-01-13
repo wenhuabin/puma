@@ -1,7 +1,8 @@
 .dashboard{
-    position: relative;
+    display: block;
     width: 100%;
-    height: calc(100% - 80px);
+    //min-height: calc(100% - 80px);
+    height: 100%;
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
@@ -59,7 +60,7 @@
         }
     }
     .footer{
-        position: absolute;
+        position: relative;
         bottom: 15px;
         display: block;
         width: 100%;
