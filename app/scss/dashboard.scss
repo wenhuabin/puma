@@ -1,11 +1,13 @@
 .dashboard{
+    position: relative;
     display: block;
+    padding: 5px 0;
     width: 100%;
-    //min-height: calc(100% - 80px);
-    height: 100%;
+    height: calc(100vh - 80px);
+    min-height: 820px;
     background-color: #fff;
     border-radius: 5px;
-    overflow: hidden;
+    //overflow: hidden;
     img{
         display: block;
         margin: 90px auto 0;
@@ -60,7 +62,7 @@
         }
     }
     .footer{
-        position: relative;
+        position: absolute;
         bottom: 15px;
         display: block;
         width: 100%;
