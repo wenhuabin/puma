@@ -2,7 +2,8 @@
     position: relative;
     padding: 20px 0 0;
     width: 100%;
-    height: calc(100% - 200px);
+    height: calc(100vh - 80px);
+    min-height: 820px;
     background-color: #fff;
     border-radius: 5px;
     overflow: hidden;
