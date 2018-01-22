@@ -22,6 +22,7 @@ class About extends Component {
 				<li>熟悉基于&nbsp;rem&nbsp;和屏幕&nbsp;dpr&nbsp;进行移动端页面适配</li>
 				<li>熟悉基于&nbsp;chartJS&nbsp;进行前端数据可视化</li>
 				<li>组件化、模块化和工程化开发，Webpack&nbsp;配置和优化、Nginx&nbsp;配置、HTTPS（HTTP2）配置部署</li>
+				<li>了解小程序开发；了解 PWA 技术</li>
             </ol>
 			<h2>项目经历</h2>
 			<ol>
