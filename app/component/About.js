@@ -21,7 +21,7 @@ class About extends Component {
 				<li>Node.js / Express 开发</li>
 				<li>Python / Flask 开发</li>
 				<li>基于&nbsp;REM&nbsp;移动端适配</li>
-				<li>基于&nbsp;ChartJS&nbsp;数据可视化</li>
+				<li>数据可视化 / 地图集成</li>
 				<li>前端组件化、模块化和工程化开发</li>
 				<li>Webpack&nbsp;配置和优化、前端性能优化</li>
 				<li>Nginx / HTTPS（HTTP2）/ BBR </li>
