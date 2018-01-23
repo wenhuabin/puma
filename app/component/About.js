@@ -15,8 +15,8 @@ class About extends Component {
             <p>Github：<a href="https://github.com/wenhuabin">wenhuabin</a></p>
 			<h2>技术能力</h2>
 			<ol>
-				<li>基于&nbsp;React&nbsp;技术栈（包括&nbsp;react-router、Redux），前后端分离&nbsp;SPA&nbsp;开发</li>
-				<li>基于&nbsp;Vue&nbsp;技术栈（包括&nbsp;vue-router、Vuex），前后端分离&nbsp;SPA&nbsp;开发和多页开发</li>
+				<li>React&nbsp;技术栈（包括&nbsp;React.js、react-router、Redux）</li>
+				<li>Vue&nbsp;技术栈（包括&nbsp;Vue.js、vue-router、Vuex）</li>
 				<li>基于&nbsp;Node.js&nbsp;和&nbsp;Express&nbsp;框架开发后端服务，包括前端页面渲染、RestFul&nbsp;风格接口开发</li>
 				<li>熟悉&nbsp;jQuery，熟悉&nbsp;Jinjia2/artTemplate&nbsp;等前端模板，熟悉&nbsp;LESS/SASS 等&nbsp;CSS&nbsp;预处理器</li>
 				<li>熟悉基于&nbsp;rem&nbsp;和屏幕&nbsp;dpr&nbsp;进行移动端页面适配</li>
