@@ -6,6 +6,8 @@ var config = require("./common.config"),
 var ExtractTextPlugin = require("extract-text-webpack-plugin"),
     WebpackMd5Hash = require('webpack-md5-hash'),
 	CleanWebpackPlugin = require('clean-webpack-plugin');
+var SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+
 const version = require('../configs/version').version;
 var SRC_PATH = path.resolve(__dirname, '../app');
 
@@ -59,6 +61,13 @@ config.plugins.push(
             warnings: false,
             drop_console: true
         }
+    }),
+    new SWPrecacheWebpackPlugin({
+        cacheId: 'puma',
+        filename: 'puma-sw.js',
+        staticFileGlobs: ['dist/*.{html,ico}','dist/**/*.{js,html,css,png,jpg}'],
+        minify: true,
+        stripPrefix: 'dist/',
     })
 );
 

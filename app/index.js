@@ -13,3 +13,11 @@ ReactDOM.render(
     </Provider>,
     document.getElementById('app')
 );
+
+let isDev = window.location.host.includes('127.0.0.1') || window.location.host.includes('localhost') || window.location.host.includes('t.t')
+
+if ('serviceWorker' in navigator && !isDev) {
+    navigator.serviceWorker
+  	           .register('./puma-sw.js')
+  	           .then(function() { console.log('Service Worker Registered'); });
+  	}
