@@ -13,7 +13,7 @@ class Dashboard extends Component {
             <h1>Welcome To Puma</h1>
             <h2>关于本站</h2>
             <ol>
-                <li>网站基于&nbsp;Express&nbsp;框架开发, 已经开启&nbsp;HTTPS&nbsp;和&nbsp;HTTP2</li>
+                <li>网站基于&nbsp;Express&nbsp;和&nbsp;React&nbsp;框架开发, 已经开启&nbsp;HTTPS&nbsp;和&nbsp;HTTP2</li>
                 <li>网站架设在&nbsp;Linode&nbsp;上，你可以通过我的&nbsp;<a href="https://www.linode.com/?r=07a0cd76f730fe5f872efa0199fa3c89c95a6f3d" target="_blank">邀请链接</a>&nbsp;注册</li>
             </ol>
             <h2>DEMO链接</h2>
