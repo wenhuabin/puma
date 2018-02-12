@@ -25,7 +25,8 @@ class About extends Component {
 				<li>前端组件化、模块化和工程化开发</li>
 				<li>Webpack&nbsp;配置和优化、前端性能优化</li>
 				<li>Nginx / HTTPS（HTTP2）/ BBR </li>
-				<li>了解小程序开发；了解 PWA 技术</li>
+				<li>熟悉 PWA 相关技术</li>
+				<li>了解小程序开发</li>
 				<li>关注前端安全</li>
             </ol>
 			<h2>项目经历</h2>
