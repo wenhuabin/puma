@@ -10,6 +10,19 @@
 - ES6
 - SASS
 - Webpack
+- Service Worker
+
+#### 运行命令
+
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8011
+npm start
+
+# build for production with minification
+npm run release 
 
 
 #### 更新日志
@@ -17,3 +30,4 @@
 2017.10.16  Update React to React 16
 
 2018.1.30   Add service worker
+
