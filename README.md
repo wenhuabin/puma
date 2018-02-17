@@ -24,6 +24,8 @@ npm start
 # build for production with minification
 npm run release 
 
+```
+
 
 #### 更新日志
 
