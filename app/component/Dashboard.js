@@ -22,6 +22,7 @@ class Dashboard extends Component {
                 <li><a href="https://vue.huabinwen.com" target="_blank">Vue Demo</a></li>
             </ul>
             <footer className="footer">{'©'} Copyright 2018 by @wenhuabin. All Right Reserved.</footer>
+            {false && <div dangerouslySetInnerHTML={{__html: 'cc &copy; 2015'}} />}
         </div>	
 	);
   }
