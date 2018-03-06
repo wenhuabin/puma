@@ -1,0 +1,19 @@
+.portal{
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    min-height: 820px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    p{
+        margin-top: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+

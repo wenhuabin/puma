@@ -44,6 +44,13 @@ module.exports = {
             	}) 
             },
         },{
+            path: 'portal',
+            getComponent(location, cb) {
+                System.import("component/demo/Portal").then(module => {
+            		cb(null, module.default);
+            	}) 
+            },
+        },{
             path: 'error',
             getComponent(location, cb) {
                 System.import("component/error/ErrorComponent").then(module => {
