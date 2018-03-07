@@ -16,4 +16,32 @@
     }
 }
 
+#alert-root {
+  position: relative;
+  z-index: 999;
+}
+
+.modal {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  height: 360px;
+  width: 480px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  button{
+      display: block;
+      width: 100px;
+      height: 35px;
+      line-height: 35px;
+      background: white;
+      font-size: 18px;
+      border-radius: 3px;
+  }
+}
+
 
