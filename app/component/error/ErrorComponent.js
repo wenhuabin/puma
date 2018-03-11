@@ -37,7 +37,7 @@ class ErrorComponent extends Component {
     //array need key
     return [
         <h2 key="error-title" style={{backgroundColor: '#fff', lineHeight: '120px', height: '120px', fontSize: '28px', textAlign: 'center', }}>Error Boundaries Test</h2>,
-        <div className="error" key="error-box">
+        <div className="error-border" key="error-box">
             <ErrorBorder>
                 <BuggyCounter />
             </ErrorBorder>
