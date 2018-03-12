@@ -77,28 +77,30 @@ class Login extends Component {
 
     render() {
       return (
-          <div className="login-box">
-              <img src={require('images/logo.jpg')} />
-              <div className="hint">Welcome to  Puma</div>
-              <div className="input-line">
-                  <input
-                    className="email"
-                    type="text"
-                    value={this.state.email}
-                    onChange={this.onEmailChange}
-                    placeholder="Email"/>
+          <div className="login-page">
+              <div className="login-box">
+                  <img src={require('images/logo.jpg')} />
+                  <div className="hint">Welcome to  Puma</div>
+                  <div className="input-line">
+                      <input
+                        className="email"
+                        type="text"
+                        value={this.state.email}
+                        onChange={this.onEmailChange}
+                        placeholder="Email"/>
+                  </div>
+                  <div className="input-line">
+                      <input
+                        className="pwd"
+                        type="password"
+                        value={this.state.pwd}
+                        onChange={this.onPwdChange}
+                        placeholder="Password"/>
+                  </div>
+                  <div className="error">{this.state.errMsg}</div>
+                  <button className="login-in" onClick={this.onLoginClick}>SIGN IN</button>
+                  <a className="signup" href="https://wenhuabin.com/signup">SIGN UP</a>
               </div>
-              <div className="input-line">
-                  <input
-                    className="pwd"
-                    type="password"
-                    value={this.state.pwd}
-                    onChange={this.onPwdChange}
-                    placeholder="Password"/>
-              </div>
-              <div className="error">{this.state.errMsg}</div>
-              <button className="login-in" onClick={this.onLoginClick}>SIGN IN</button>
-              <a className="signup" href="https://wenhuabin.com/signup">SIGN UP</a>
           </div>
       );
     }
