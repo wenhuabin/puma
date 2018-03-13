@@ -23,7 +23,7 @@ class About extends Component {
 				<li>基于&nbsp;REM&nbsp;移动端适配</li>
 				<li>数据可视化 / 地图集成</li>
 				<li>前端组件化、模块化和工程化开发</li>
-				<li>Webpack&nbsp;配置和优化、前端性能优化</li>
+				<li>Webpack、Parcel&nbsp;配置和优化; &nbsp;前端性能优化 </li>
 				<li>Nginx / HTTPS（HTTP2）/ BBR </li>
 				<li>熟悉 PWA 相关技术</li>
 				<li>了解小程序开发</li>
