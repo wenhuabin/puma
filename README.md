@@ -33,3 +33,11 @@ npm run release
 
 2018.1.30   Add service worker
 
+2018.3.24   Update Webpack to version 4.2.0
+
+> tips:
+
+> update html-webpack-plugin to v3.1.0 
+> update babel-core to v6.26.0, babel-loader to v7.1.4 
+> update file-loader to v1.1.11
+> update sass-loader to v6.0.7 node-sass to 4.8.3

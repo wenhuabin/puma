@@ -20,6 +20,7 @@ _.forEach(config.entry, function(value, key){
 
     devEntryConfig[key] = value;
 });
+config.mode = 'development';
 config.module.rules.push({
 	test: /\.(png|jpg)$/,
     loader: "url-loader",
@@ -39,16 +40,18 @@ config.devServer = {
     historyApiFallback : true
 };
 
-config.plugins.push(new webpack.DefinePlugin({
-		              	'process.env': {
-		              	  NODE_ENV: JSON.stringify('development')
-		              	}
-		            }),
-                    new webpack.HotModuleReplacementPlugin(),
-                    new webpack.NoEmitOnErrorsPlugin(),
-                    new webpack.LoaderOptionsPlugin({
-                        debug: true
-                    }));
+config.plugins.push(
+    //new webpack.DefinePlugin({
+	//  	'process.env': {
+	//  	  NODE_ENV: JSON.stringify('development')
+	//  	}
+	//}),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoEmitOnErrorsPlugin(),
+    new webpack.LoaderOptionsPlugin({
+        debug: true
+    })
+);
 
 module.exports = config;
 
