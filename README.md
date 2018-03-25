@@ -41,3 +41,7 @@ npm run release
 > update babel-core to v6.26.0, babel-loader to v7.1.4 
 > update file-loader to v1.1.11
 > update sass-loader to v6.0.7 node-sass to 4.8.3
+> update extract-text-webpack-plugin to v4.0.0-beta.0
+> update file-loader to v1.1.11
+> use uglifyjs-webpack-plugin instead of webpack.optimize.UglifyJsPlugin(removed in webpack 4)
+

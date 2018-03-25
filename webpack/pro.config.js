@@ -1,12 +1,13 @@
-var config = require("./common.config"),
+let config = require("./common.config"),
     path = require('path'),
     node_modules_dir = path.resolve(__dirname, '../node_modules/'),
     webpack = require('webpack');
 
-var ExtractTextPlugin = require("extract-text-webpack-plugin"),
+let ExtractTextPlugin = require("extract-text-webpack-plugin"),
     WebpackMd5Hash = require('webpack-md5-hash'),
-	CleanWebpackPlugin = require('clean-webpack-plugin');
-var SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+	CleanWebpackPlugin = require('clean-webpack-plugin'),
+    SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin'),
+    UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const version = require('../configs/version').version;
 var SRC_PATH = path.resolve(__dirname, '../app');
@@ -50,17 +51,20 @@ config.plugins.push(
 		verbose: true,
 		dry: false
 	}),
-    new webpack.optimize.UglifyJsPlugin({
-        output: {
-            comments: false
-        },
+    new UglifyJsPlugin({
         sourceMap: false,
-        minimize: true,
         parallel: true,
-        compress: {
-            drop_debugger: true,
-            warnings: false,
-            drop_console: true
+        //minimize: true, //貌似已经废弃
+        cache: true,
+        uglifyOptions: {
+            output: {
+                comments: false
+            },
+            compress: {
+                drop_debugger: true,
+                warnings: false,
+                drop_console: true
+            }
         }
     }),
     new SWPrecacheWebpackPlugin({
