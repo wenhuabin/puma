@@ -51,6 +51,13 @@ module.exports = {
             	}) 
             },
         },{
+            path: 'experiment',
+            getComponent(location, cb) {
+                System.import("component/demo/Experiment").then(module => {
+            		cb(null, module.default);
+            	}) 
+            },
+        },{
             path: 'error',
             getComponent(location, cb) {
                 System.import("component/error/ErrorComponent").then(module => {
