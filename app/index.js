@@ -18,6 +18,6 @@ let isDev = window.location.host.includes('127.0.0.1') || window.location.host.i
 
 if ('serviceWorker' in navigator && !isDev) {
     navigator.serviceWorker
-  	           .register('./puma-sw.js')
+  	           .register('/puma-sw.js')
   	           .then(function() { console.log('Service Worker Registered'); });
   	}
