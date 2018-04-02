@@ -1,7 +1,6 @@
 import 'scss/experiment.scss';
 import {Component} from 'react';
-import ReactDOM from 'react-dom';
-
+import SetState from 'component/demo/SetState';
 
 class Experiment extends Component {
     constructor(props) {
@@ -39,6 +38,7 @@ class Experiment extends Component {
                 <input className="child-listener" onChange ={this.childInputClick}/>
                 
             </div>
+            <SetState />
         </div>
       );
     }
