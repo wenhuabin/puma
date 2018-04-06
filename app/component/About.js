@@ -1,12 +1,6 @@
 import 'scss/about.scss';
-import {Component} from 'react';
 
-class About extends Component {
-  constructor(props){
-	super(props);
-  }
-	
-  render() {
+function About(){
     return (
 		<div className="about">
 			<h2>关于我</h2>
@@ -45,7 +39,6 @@ class About extends Component {
 		    <footer className="footer">{'©'}  Copyright 2018 by @wenhuabin. All Right Reserved.</footer>
 		</div>
 	);
-  }
-};
+}
 
 export default About;

@@ -1,12 +1,6 @@
 import 'scss/dashboard.scss';
-import {Component} from 'react';
 
-class Dashboard extends Component {
-  constructor(props){
-	super(props);
-  }
-	
-  render() {
+function Dashboard(){
     return (
 	    <div className="dashboard">
             <img src={require('images/logo.jpg')} />
@@ -25,7 +19,6 @@ class Dashboard extends Component {
             {false && <div dangerouslySetInnerHTML={{__html: 'cc &copy; 2015'}} />}
         </div>	
 	);
-  }
-};
+}
 
 export default Dashboard;
