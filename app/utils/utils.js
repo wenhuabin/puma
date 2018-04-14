@@ -57,3 +57,13 @@ exports.GetCurrentStyle = function(obj, prop) {
    return null;     
 }
 
+exports.debounce function (){
+    let debPointer = null;
+    return function(func){
+        if(debPointer != null){
+            clearTimeout(debPointer);
+            debPointer = null;
+        }
+        debPointer = setTimeout(func, 1000);
+    }
+}
