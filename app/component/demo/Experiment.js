@@ -1,15 +1,20 @@
 import 'scss/experiment.scss';
 import {Component} from 'react';
 import SetState from 'component/demo/SetState';
+import FunctionComponent from 'component/demo/FunctionComponent';
 
 class Experiment extends Component {
     constructor(props) {
         super(props);
-        this.state = {clicks: 0};
+        this.state = {
+            clicks: 0,
+            text: '纯函数组件测试',
+        };
         this.parentClick = this.parentClick.bind(this);
         this.childOneClick = this.childOneClick.bind(this);
         this.childTwoClick = this.childTwoClick.bind(this);
         this.childInputClick = this.childInputClick.bind(this);
+        this.showAlertFromFuncClick = this.showAlertFromFuncClick.bind(this);
     }
     parentClick(e){
         console.log('parent dispatch');
@@ -28,6 +33,9 @@ class Experiment extends Component {
         console.log(e.target.value);
         console.log(e.currentTarget.value);
     }
+    showAlertFromFuncClick(e){
+        console.log('FunctionComponent click!');
+    }
     render() {
       return (
         <div className="experiment">
@@ -39,6 +47,7 @@ class Experiment extends Component {
                 
             </div>
             <SetState />
+            <FunctionComponent text={this.state.text} callBack={this.showAlertFromFuncClick}/>
         </div>
       );
     }
