@@ -51,6 +51,13 @@ module.exports = {
             	}) 
             },
         },{
+            path: 'list',
+            getComponent(location, cb) {
+                System.import("component/list/List").then(module => {
+            		cb(null, module.default);
+            	}) 
+            },
+        },{
             path: 'experiment',
             getComponent(location, cb) {
                 System.import("component/demo/Experiment").then(module => {

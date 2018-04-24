@@ -59,6 +59,7 @@ var config = {
             'middlewares': path.resolve(SRC_PATH, 'middlewares'),
             'utils': path.resolve(SRC_PATH, 'utils'),
             'component': path.resolve(SRC_PATH, 'component'),
+            'react-virtualized/List': 'react-virtualized/dist/es/List',
 		},
     },
 	plugins: [

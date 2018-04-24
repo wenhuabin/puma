@@ -19,7 +19,7 @@ Object.assign(config.output, {
 });
 config.mode = 'production';
 config.module.rules.push({
-	test: /\.scss$/,
+	test: /\.(scss|css)$/,
 	use: ExtractTextPlugin.extract({
 		fallback: "style-loader",
 		use: [

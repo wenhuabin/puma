@@ -1,0 +1,14 @@
+.list-demo{
+    position: relative;
+    padding: 20px 0 0;
+    width: 100%;
+    height: calc(100vh - 100px);
+    min-height: 820px;
+    background-color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    .vitual-list{
+        margin: 30px auto;
+        width: 80%;
+    }
+}

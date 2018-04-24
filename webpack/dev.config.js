@@ -28,7 +28,7 @@ config.module.rules.push({
         limit: 8192,
     }
 },{
-	test: /\.scss$/,
+	test: /\.(scss|css)$/,
 	use:[
 		"style-loader",
 		"css-loader",
