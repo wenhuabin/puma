@@ -1,16 +1,17 @@
 import 'scss/list.scss';
-import * as styles from 'react-virtualized/styles.css'
+import styles from 'scss/styles.scss'
 import {Component} from 'react';
 import AutoSizer from 'react-virtualized/dist/commonjs/AutoSizer';
 import List from 'react-virtualized/List';
 import {List as IList} from 'immutable';
+import cn from 'classnames';
 
 class VList extends Component {
     constructor(props){
         super(props);
         this.state = {
             list: this._renderList(),
-            listHeight: 300,
+            listHeight: 420,
             listRowHeight: 50,
             overscanRowCount: 10,
             rowCount: 20,
@@ -34,14 +35,13 @@ class VList extends Component {
         let list = IList([]);
         for(let i=0; i<20; i++){
             //return new list every push
-            list = list.push({color: 'red', size: 34, name: `第 ${i} 个人`});
+            list = list.push({color: 'red', size: 34, name: `The ${i}nd men.`});
         }
         return list;
     }
 
     _getDatum(index) {
         const list = this.state.list;
-        console.log(list);
         return list.get(index % list.size);
     }
 
@@ -82,7 +82,6 @@ class VList extends Component {
               className={cn(styles.row, styles.isScrollingPlaceholder)}
               key={key}
               style={style}>
-              Scrolling...
             </div>
           );
         }
