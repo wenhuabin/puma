@@ -1,5 +1,5 @@
 import 'scss/list.scss';
-import styles from 'scss/styles.scss'
+import 'scss/styles.css'
 import {Component} from 'react';
 import AutoSizer from 'react-virtualized/dist/commonjs/AutoSizer';
 import List from 'react-virtualized/List';
@@ -50,7 +50,7 @@ class VList extends Component {
     }
 
     _noRowsRenderer() {
-        return <div className={styles.noRows}>No rows</div>;
+        return <div className="noRows">No rows</div>;
     }
 
     _onRowCountChange(event) {
@@ -79,7 +79,7 @@ class VList extends Component {
         if (showScrollingPlaceholder && isScrolling) {
           return (
             <div
-              className={cn(styles.row, styles.isScrollingPlaceholder)}
+              className={cn("row", "isScrollingPlaceholder")}
               key={key}
               style={style}>
             </div>
@@ -106,21 +106,21 @@ class VList extends Component {
         }
 
         return (
-          <div className={styles.row} key={key} style={style}>
+          <div className="row" key={key} style={style}>
             <div
-              className={styles.letter}
+              className="letter"
               style={{
                 backgroundColor: datum.color,
               }}>
               {datum.name[0]}
             </div>
             <div>
-              <div className={styles.name}>{datum.name}</div>
-              <div className={styles.index}>This is row {index}</div>
+              <div className="name">{datum.name}</div>
+              <div className="index">This is row {index}</div>
               {additionalContent}
             </div>
             {useDynamicRowHeight && (
-              <span className={styles.height}>{datum.size}px</span>
+              <span className="height">{datum.size}px</span>
             )}
           </div>
         );
@@ -143,7 +143,7 @@ class VList extends Component {
                      {({width}) => (
                        <List
                          ref="List"
-                         className={styles.List}
+                         className="List"
                          height={listHeight}
                          overscanRowCount={overscanRowCount}
                          noRowsRenderer={this._noRowsRenderer}
