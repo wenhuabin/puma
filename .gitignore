@@ -8,4 +8,5 @@ build
 configs/version.json
 node_modules
 npm-debug.log
+v8-compile-cache-0/
 __build__
