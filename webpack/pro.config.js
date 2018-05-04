@@ -42,7 +42,7 @@ config.plugins.push(
 	//  	}
 	//}),
 	new ExtractTextPlugin({
-        filename: 'css/[id].[contenthash:8].' + version + '.css',
+        filename: 'css/[id].[hash:8].' + version + '.css',
 	    allChunks: true, 
 	    disable: false,
 	}),
