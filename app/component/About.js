@@ -4,7 +4,7 @@ function About(){
     return (
 		<div className="about">
 			<h2>关于我</h2>
-            <p className="my-info">Wen&nbsp;Huabin，前端开发工程师</p>
+            <p className="my-info">Wen&nbsp;Huabin，高级前端开发工程师</p>
             <p>Email：<a href="mailto:huabinwen@gmail.com">huabinwen@gmail.com</a></p>
             <p>Github：<a href="https://github.com/wenhuabin">wenhuabin</a></p>
 			<h2>技术能力</h2>
