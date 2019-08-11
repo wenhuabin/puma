@@ -15,7 +15,7 @@ function Dashboard(){
                 <li><a href="https://huabinwen.com" target="_blank">Express Demo</a></li>
                 <li><a href="https://vue.huabinwen.com" target="_blank">Vue Demo</a></li>
             </ul>
-            <footer className="footer">{'©'} Copyright 2018 by @wenhuabin. All Right Reserved.</footer>
+            <footer className="footer">{'©'} Copyright 2019 by @wenhuabin. All Right Reserved.</footer>
             {false && <div dangerouslySetInnerHTML={{__html: 'cc &copy; 2015'}} />}
         </div>	
 	);
