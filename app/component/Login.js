@@ -51,7 +51,7 @@ class Login extends Component {
         formData.append("email", this.state.email);
         formData.append("password", this.state.pwd);
         
-        fetch('https://huabinwen.com/login', {
+        fetch('https://wenhuabin.com/login', {
             method: 'POST',
             credentials: 'include',
             body: formData

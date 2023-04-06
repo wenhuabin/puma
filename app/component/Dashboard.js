@@ -12,10 +12,10 @@ function Dashboard(){
             </ol>
             <h2>DEMO链接</h2>
             <ul>
-                <li><a href="https://huabinwen.com" target="_blank">Express Demo</a></li>
-                <li><a href="https://vue.huabinwen.com" target="_blank">Vue Demo</a></li>
+                <li><a href="https://wenhuabin.com" target="_blank">Express Demo</a></li>
+                <li><a href="https://vue.wenhuabin.com" target="_blank">Vue Demo</a></li>
             </ul>
-            <footer className="footer">{'©'} Copyright 2019 by @wenhuabin. All Right Reserved.</footer>
+            <footer className="footer">{'©'} Copyright 2023 by @wenhuabin. All Right Reserved.</footer>
             {false && <div dangerouslySetInnerHTML={{__html: 'cc &copy; 2015'}} />}
         </div>	
 	);
