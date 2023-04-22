@@ -23,6 +23,14 @@ module.exports = {
             	}) 
             },
         },
+        {
+            path: 'screen',
+            getComponent(location, cb) {
+                System.import("component/Screen").then(module => {
+            		cb(null, module.default);
+            	}) 
+            },
+        },
         require('./demo'),
         {
             path: '*', //处理不存在的路由

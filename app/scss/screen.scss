@@ -1,0 +1,197 @@
+table {
+    background-color: #000;
+    border-radius: 3px;
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+
+    td {
+        word-break: break-all;
+        div{
+            display: inline-block;
+        }
+    }
+
+    th{
+        border-bottom: 1px solid #ffd37a;
+        color: #ffd37a;
+    }
+    th,
+    td {
+        text-align: left;
+        padding: 5px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    tbody{
+        tr:hover{
+            cursor: pointer;
+        }
+        tr:nth-child(even) {
+            background-color: grey;
+
+        }
+    }
+
+    .status-unnormal{
+        color: red;
+    }
+    .status-arrived{
+        color: blue;
+    }
+
+    th:nth-child(1),
+    td:nth-child(1){
+        width: 50px;
+    }
+    th:nth-child(2),
+    td:nth-child(2){
+        width: 71px;
+        max-width: 71px;
+    }
+    th:nth-child(3),
+    td:nth-child(3){
+        width: 85px;
+        max-width: 85px;
+    }
+    th:nth-child(4),
+    td:nth-child(4){
+        width: 50px;
+    }
+    th:nth-child(5),
+    td:nth-child(5){
+        width: 80px;
+        max-width: 80px;
+    }
+}
+
+.airport-screen{
+    position: relative;
+    margin: 100px auto;
+    padding: 0;
+    width: 1008px;
+    height: 589px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+
+
+    .flights-table-box{
+        flex: 1;
+    }
+
+    .table-title{
+        padding: 10px 0;
+        text-align: center;
+        color: #ffd37a;
+    }
+    .all-flights{
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9;
+    }
+    .detail-mask{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1008px;
+        height: 589px;
+        background-color: #000;
+        z-index: 10;
+    }
+    .flight-detail{
+        padding: 40px 20px 20px;
+        height: 589px;
+    }
+    .flight-detail-title{
+        color: #ffd37a;
+    }
+    .close{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        color: #fff;
+    }
+    .close:hover{
+        cursor: pointer;
+    }
+
+}
+
+.word-scroll{
+    animation: 8s wordsLoop linear infinite  normal;
+    -webkit-animation: 8s wordsLoop linear infinite  normal;
+}
+
+.fade-in{
+    animation: 2s fadeIn linear ;
+    -webkit-animation: 2s fadeIn linear ;
+}
+
+.detail-fade-in{
+    animation: 2s DfadeIn linear ;
+    -webkit-animation: 2s DfadeIn linear ;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes wordsLoop {
+    0%{
+        transform: translateX(80%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes wordsLoop{
+    0%{
+        transform: translateX(80%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes DfadeIn{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+@keyframes DfadeIn{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
